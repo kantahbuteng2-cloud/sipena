@@ -161,7 +161,7 @@ if (isMobile) {
 }
 
 // Cek koneksi secara berkala
-setInterval(checkConnection, 600000);
+setInterval(checkConnection, 900000);
 
 // Inisialisasi pertama kali
 document.addEventListener('DOMContentLoaded', () => {
@@ -191,4 +191,5 @@ window.addEventListener('orientationchange', () => {
         iframe.style.height = `${window.innerHeight - 120}px`;
     }, 300);
 });
+
 
