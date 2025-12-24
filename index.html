@@ -1,14 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>SIPENA KANTAH BUTENG</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="error-message">KONEKSI INTERNET ANDA TERPUTUS, CEK KONEKSI ANDA</div>
-    <iframe id="iframe" src="https://script.google.com/macros/s/AKfycbzA2g-Itkr2V1eCsTuLVBYr0114FuKyhQ16DtcvOS7Bwekh7bf9jYDc6IvmcysMy4St5Q/exec"></iframe>
-    
+    <!-- Header untuk mobile -->
+    <div class="mobile-header">
+        <div class="header-title">SIPENA</div>
+        <button id="fullscreen-btn" class="fullscreen-btn" aria-label="Mode layar penuh">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Konten utama -->
+    <div class="content-wrapper">
+        <div id="error-message">
+            <div class="error-icon">📶</div>
+            <h2>KONEKSI INTERNET TERPUTUS</h2>
+            <p>Cek koneksi internet Anda dan pastikan sinyal stabil</p>
+            <button id="retry-btn" class="retry-btn">COBA LAGI</button>
+        </div>
+        
+        <iframe id="iframe" src="https://script.google.com/macros/s/AKfycbzA2g-Itkr2V1eCsTuLVBYr0114FuKyhQ16DtcvOS7Bwekh7bf9jYDc6IvmcysMy4St5Q/exec"></iframe>
+    </div>
+
+    <!-- Footer untuk mobile -->
+    <div class="mobile-footer">
+        <div class="connection-status">
+            <span id="status-icon" class="status-icon online">●</span>
+            <span id="status-text">Terhubung</span>
+        </div>
+        <div class="last-update" id="last-update"></div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
